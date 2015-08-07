@@ -1,0 +1,10 @@
+blade
+vendor/
+dist/
+.goxc.ok
+iTunesArtwork@2x.png
+out
+c.out
+cover.out
+.DS_Store
+0.*/
