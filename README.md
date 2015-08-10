@@ -28,6 +28,9 @@ Supported workflows:
 
 Download one of the binaries in `releases`, suitable for your platform (You can run Blade on OSX, Linux and even Windows)
 
+![](docs/blade.gif)
+
+
 #### Create a new catalog
 
 ```
@@ -42,7 +45,7 @@ To explicitly generate an image catalog I'm specifying the `--catalog` flag.
 #### Update an existing catalog
 
 ```
-$ blade -s iTunesArtwork@2x.png -t existing.xcasset -o existing.xcasset
+$ blade -s iTunesArtwork@2x.png -t existing.imageset -o existing.imageset
 ```
 
 In this scenario, we're doing the same as before, but not generating a new catalog. Blade is reading an existing image catalog, and updates all images from the source image in-place.
@@ -71,22 +74,15 @@ INFO[0000] Bladefile contains 8 blade defs.
 
 ## Hacking on Blade
 
-Clone this project, then `rm -rf .git`.
 
 ```bash
-$ git clone https://github.com/jondot/go-cli-starter
-$ mv go-cli-starter my-project && cd my-project
-$ rm -rf .git # you should be within my-project
-$ make build
 ```
 
 `make` should be your entry point.
 
-* `make build` - build
-* `make test` - test
-* `make dist` - build and package binaries for multiple platforms
-
-Note: You should edit your binary name in `Rakefile`.
+* `make setup` - setup the tooling for the project
+* `make` - default build
+* `make release` - cross build a release for multiple platforms
 
 
 # Contributing
