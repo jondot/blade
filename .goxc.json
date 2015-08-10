@@ -1,15 +1,15 @@
 {
 	"ArtifactsDest": ".",
 	"Tasks": [
-    "go-vet",
-    "go-test",
+		"go-vet",
+		"go-test",
 		"xc",
-    "tag",
+		"tag",
 		"archive",
-    "rmbin"
+		"rmbin"
 	],
 	"BuildConstraints": "linux,darwin",
-	"PackageVersion": "0.0.2",
+	"PackageVersion": "0.0.3",
 	"ConfigVersion": "0.9",
 	"Env": [
 		"GOPATH=Godeps{{.PLS}}{{.Env.GOPATH}}"

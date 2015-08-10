@@ -7,6 +7,7 @@ Build XCode image catalogs for app icons, universal images, and more - automatic
 * You can use Blade in existing projects to generate all of your image catalogs with no extra work. It will automagically generate new icons for you based on what's inside existing image catalogs.
 * You can also use templates of image catalogs to generate your own catalogs from (you can find some included in `/templates`), to generate new image catalogs from.
 
+![](docs/blade.gif)
 
 ## How does it work?
 
@@ -22,13 +23,10 @@ Supported workflows:
 * __CI__ in your CI servers, either on OSX or Linux (though Linux can't compile code in this case, you can still use it to do image processing)
 
 
-
-
 ## Quick start
 
 Download one of the binaries in `releases`, suitable for your platform (You can run Blade on OSX, Linux and even Windows)
 
-![](docs/blade.gif)
 
 
 #### Create a new catalog
