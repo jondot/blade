@@ -25,7 +25,7 @@ Supported workflows:
 
 ## Quick start
 
-Download one of the binaries in `releases`, suitable for your platform (You can run Blade on OSX, Linux and even Windows)
+Download one of the binaries in [releases](https://github.com/jondot/blade/releases), suitable for your platform (You can run Blade on OSX, Linux and even Windows)
 
 
 
