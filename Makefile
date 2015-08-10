@@ -3,7 +3,7 @@ default:
 	@godep go build
 	@ls -ltrh
 
-setup: .goxc.ok
+setup: 
 	@echo Installing developer tooling, godep and reflex
 	go get github.com/tools/godep
 	go get github.com/cespare/reflex/...
@@ -28,7 +28,7 @@ coverage: test
 bump:
 	@goxc bump
 
-release:
+release: .goxc.ok
 	godep save
 	goxc
 
