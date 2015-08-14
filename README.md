@@ -1,9 +1,11 @@
-<p align="center">
-  <h1>Blade  <img src="https://travis-ci.org/jondot/blade.svg?branch=master" alt="Build Status" /></h1>
-  Automatically build and rebuild XCode image catalogs
+<h1 align="center">
+  Blade
+  <img src="https://travis-ci.org/jondot/blade.svg?branch=master" alt="Build Status" />
   <br/>
   <img src="docs/blade-s.png" alt="Blade" />
-</p>
+</h1>
+
+Automatically build and rebuild XCode image catalogs for app icons, universal images, and more.
 
 
 
