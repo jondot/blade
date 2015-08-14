@@ -1,7 +1,8 @@
 <h2 align="center">
   <img src="docs/blade-s.png" alt="fastlane Logo" />
   <br/>
-  Blade ![Build Status](https://travis-ci.org/jondot/blade.svg?branch=master)
+  Blade
+  <img src="https://travis-ci.org/jondot/blade.svg?branch=master" alt="Build Status" />
 </h2>
 
 Automatically build and rebuild XCode image catalogs for app icons, universal images, and more.
