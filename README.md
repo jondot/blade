@@ -13,7 +13,6 @@ Automatically build and rebuild XCode image catalogs for app icons, universal im
 * Use in existing projects to generate image catalogs with no extra work. Blade will automagically refresh your image catalogs based on given master images.
 * Use templates of image catalogs to generate new catalogs (see [templates](templates/)).
 
-![](docs/blade.gif)
 
 
 ## Why?
@@ -38,6 +37,8 @@ Blade is an open source tool which will replace the PSD template and/or online s
 ## Quick start
 
 Download one of the binaries in [releases](https://github.com/jondot/blade/releases), and put in your `PATH` or just include in each XCode project's root.
+
+![](docs/blade.gif)
 
 
 #### Use a Bladefile
