@@ -12,7 +12,8 @@ Automatically build and rebuild XCode image catalogs for app icons, universal im
 
 ## Why?
 
-Because most of the times, your images in your image catalogs are not specialized per size, they are simply resized (reduced in size) per size.
+Because most of the time your image catalogs are the same image, resized to various sizes.
+
 Here is how people solve this usually:
 
 * Have the designer slice the images manually / automatically using a [PSD template](http://appicontemplate.com/)
@@ -25,7 +26,7 @@ The problem with these solutions is:
 * You can't control the quality of the resize
 * You can't integrate the tooling into your build workflow or CI
 
-Blade is an open source tool which has a goal to satisfy the above requirements in the best way.
+Blade is an open source tool which will replace the PSD template and/or online services for you, and has a goal to satisfy the above requirements in the best way possible.
 
 
 ## Quick start
