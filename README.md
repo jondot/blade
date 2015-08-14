@@ -1,5 +1,7 @@
 # Blade ![Build Status](https://travis-ci.org/jondot/blade.svg?branch=master)
 
+![](docs/blade-s.png)
+
 Automatically build and rebuild XCode image catalogs for app icons, universal images, and more.
 
 
