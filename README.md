@@ -10,6 +10,23 @@ Automatically build and rebuild XCode image catalogs for app icons, universal im
 ![](docs/blade.gif)
 
 
+## Why?
+
+Because most of the times, your images in your image catalogs are not specialized per size, they are simply resized (reduced in size) per size.
+Here is how people solve this usually:
+
+* Have the designer slice the images manually / automatically using a [PSD template](http://appicontemplate.com/)
+* Use some sort of [online image slicing service](http://makeappicon.com/) which emails you a zip of the various sizes
+
+The problem with these solutions is:
+
+* Some times the various slices are not up to date with XCode (new devices, new sizes)
+* It Almost always require extra work from you (placing each image manually in the catalog, fixing mismatches etc.)
+* You can't control the quality of the resize
+* You can't integrate the tooling into your build workflow or CI
+
+Blade is an open source tool which has a goal to satisfy the above requirements in the best way.
+
 
 ## Quick start
 
@@ -38,6 +55,10 @@ It was made for this project structure:
 
 ```
 foobar
+├── Bladefile
+├── images
+│   ├── iTunesArtwork@2x.png
+│   └── Spaceship_1024.png
 ├── foobar
 │   ├── AppDelegate.swift
 │   ├── Assets.xcassets
@@ -53,6 +74,7 @@ Then use Blade (use --verbose if you want logs) within the same folder where you
 $ blade --verbose
 INFO[0000] Found a local Bladefile.
 INFO[0000] Bladefile contains 2 blade defs.
+...
 ```
 
 And it will generate all of the images needed within each image catalog.
@@ -68,27 +90,30 @@ To make this happen before each build see [how to run a script while building a 
 $ blade --source=iTunesArtwork@2x.png --template=templates/watch.json --out=out/watch --catalog
 ```
 
-Here we want to create an app icon image catalog for Apple Watch. We're using the biggest icon image we have (Typically it is the iTunes Artwork icon, where you must upload a 1024x1024 image).
+Here's what we did:
 
-I am using my Apple Watch `Contents.json` template (for image catalog configuration), and I'm dropping all generated assets - images, Contents.json in the `out/watch` folder.
-To explicitly generate an image catalog I'm specifying the `--catalog` flag.
+* Use a source image (`--source`)
+* Make a brand new image catalog (`--catalog`), from a template (`templates/watch.json`)
+* Put everything in `out/watch`
 
 
 ```
 $ blade -s iTunesArtwork@2x.png -t existing.imageset -o existing.imageset
 ```
 
-In this scenario, we're doing the same as before, but not generating a new catalog. Blade is reading an existing image catalog, and updates all images from the source image in-place.
+Here's what we did:
 
-We're also using shorthand flags notation.
+* Use a source image (`-s`)
+* Point to an existing image catalog (`-t`)
+* Output to that same existing image catalog (`-o`)
+* In other words, Blade will refresh the images in this catalog
 
 
 
 ## How does it work?
 
-Given a source image, with a high enough resolution, you can generate every needed image size for iPhone, Apple Watch, Universal and any other format Apple will come up with in the future. 
 
-This can be done because Blade uses __the same XCode image catalog__ configuration file, as its own configuration source - no new concept introduced.
+Blade parses __the same XCode image catalog__ configuration file as its own configuration source - no new concept introduced. This allows it to be future-proof with XCode updates for new image sizes and catalog types.
 
 
 Supported workflows:
@@ -102,15 +127,16 @@ Supported workflows:
 
 ## Hacking on Blade
 
+Pull requests are happily accepted.
 
-```bash
-```
+Here's what you should know if you want to improve Blade:
 
-`make` should be your entry point.
+* Your workflow starting point is the `Makefile`. There you should see how to setup the development tooling, run builds, tests and coverage.
+* The architecture splits out the runner from the converter, so that we could swap to other, faster, converters (vips) if needed.
+* The other concerns are the `Contents.json` ([contents.go](contents.go)) parsing and dimension ([dimensions.go](dimensions.go)) computation logic.
+* Finally, you're left with the Bladefile ([bladefile.go](bladefile.go)) and CLI ([main.go](main.go)) logic to handle.
 
-* `make setup` - setup the tooling for the project
-* `make` - default build
-* `make release` - cross build a release for multiple platforms
+Also, check out [fixtures](fixtures) for quick image catalog configuration to work with.
 
 
 # Contributing
