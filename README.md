@@ -163,6 +163,20 @@ Here's what you should know if you want to improve Blade:
 
 Also, check out [fixtures](fixtures) for quick image catalog configuration to work with.
 
+Here is a typical flow:
+
+1. Clone project
+2. Branch off for your changes
+3. Edit code
+4. Test your changes, submit PR
+5. (release) `make bump`
+6. (release) `make release`
+7. (release) use hub to upload release binaries
+8. (release) update jondot/homebrew-tap to point to new binary
+
+(* 'release' flows are done by core committers)
+
+
 
 # Contributing
 
