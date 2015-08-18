@@ -56,10 +56,14 @@ Download one of the binaries in [releases](https://github.com/jondot/blade/relea
 
 This should be a typical run of blade:
 
-![](docs/blade.gif)
 
 
 #### Use a Bladefile
+
+Here's how a project setup with a Bladefile feels like (more in the [Blade Sample](https://github.com/jondot/blade-sample) repo): 
+
+![](docs/blade-walkthrough.gif)
+
 
 The best way to use Blade, is to set up a local `Bladefile` for your entire project. Within it, specify all of your resources. Blade will pick it up automatically.
 
@@ -113,6 +117,10 @@ To make this happen before each build see [how to run a script while building a 
 
 
 #### Use directly
+
+
+![](docs/blade.gif)
+
 
 ```
 $ blade --source=iTunesArtwork@2x.png --template=templates/watch.json --out=out/watch --catalog
