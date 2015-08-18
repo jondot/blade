@@ -23,17 +23,17 @@ var version = kingpin.Flag("version", "Current version").Short('v').Bool()
 
 var BLADEFILE = `#
 # Uncomment below to specify your own resources.
+# See https://github.com/jondot/blade for more information.
 #
 
 #blades:
+#  - source: iTunesArtwork@2x.png  # this image should be the only image, and the biggest image you can use (typically for icons, 1024x1024)
+#    mount: project_name/Images.xcassets/AppIcon.appiconset
+#    contents: true  # use 'false' if you want to only update existing catalog, 'true' if you want to generate a full catalog every time
+#  - source: spaceship.png
+#    mount: project_name/Images.xcassets/Spaceship.imageset # you can also generate regular image sets, not just app icons
 #  - source: iTunesArtwork@2x.png
-#    mount: out/iphone
-#  - source: iTunesArtwork@2x.png
-#    template: templates/watch.json
-#    out: out/newwatch
-#    contents: true
-#  - source: iTunesArtwork@2x.png
-#    template: templates/iphone-appicon.json
+#    template: templates/iphone-appicon.json # use a template if you want to batch build catalogs regardless of an xcode project (e.g. as part of a CI process)
 #    out: out/newiphone
 #    contents: true
 `

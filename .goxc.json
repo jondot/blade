@@ -9,7 +9,7 @@
 		"rmbin"
 	],
 	"BuildConstraints": "linux,darwin",
-	"PackageVersion": "0.0.3",
+	"PackageVersion": "0.0.5",
 	"ConfigVersion": "0.9",
 	"Env": [
 		"GOPATH=Godeps{{.PLS}}{{.Env.GOPATH}}"
