@@ -36,7 +36,24 @@ Blade is an open source tool which will replace the PSD template and/or online s
 
 ## Quick start
 
+You have 2 ways to install:
+
+#### Homebrew
+
+Using Homebrew:
+
+```
+ $ brew tap jondot/tap
+ $ brew install blade
+```
+
+#### Release
+
 Download one of the binaries in [releases](https://github.com/jondot/blade/releases), and put in your `PATH` or just include in each XCode project's root.
+
+
+
+This should be a typical run of blade:
 
 ![](docs/blade.gif)
 
