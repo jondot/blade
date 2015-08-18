@@ -13,6 +13,7 @@ Automatically build and rebuild XCode image catalogs for app icons, universal im
 * Use in existing projects to generate image catalogs with no extra work. Blade will automagically refresh your image catalogs based on given master images.
 * Use templates of image catalogs to generate new catalogs (see [templates](templates/)).
 
+See [blade-sample](https://github.com/jondot/blade-sample) for a preconfigured project.
 
 
 ## Why?
@@ -61,6 +62,8 @@ This should be a typical run of blade:
 #### Use a Bladefile
 
 The best way to use Blade, is to set up a local `Bladefile` for your entire project. Within it, specify all of your resources. Blade will pick it up automatically.
+
+_See [blade-sample](https://github.com/jondot/blade-sample) for a preconfigured project._
 
 ```
 $ blade --init
