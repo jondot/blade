@@ -35,5 +35,7 @@ release: .goxc.ok
 mocks:
 	@mockery -name Converter
 
-.PHONY: default test setup release watch coverage mocks bump
+brew_sha:
+	@shasum -a 256 $(ver)/blade_$(ver)_darwin_amd64.zip
+.PHONY: default test setup release watch coverage mocks bump brew_sha
 

@@ -172,7 +172,8 @@ Here is a typical flow:
 5. (release) `make bump`
 6. (release) `make release`
 7. (release) use hub to upload release binaries
-8. (release) update jondot/homebrew-tap to point to new binary
+8. (release) `make brew_sha ver=<current version>`
+8. (release) update jondot/homebrew-tap version and sha to point to new binary
 
 (* 'release' flows are done by core committers)
 
