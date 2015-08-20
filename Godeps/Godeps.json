@@ -1,6 +1,6 @@
 {
 	"ImportPath": "github.com/jondot/blade",
-	"GoVersion": "go1.4.2",
+	"GoVersion": "go1.5",
 	"Deps": [
 		{
 			"ImportPath": "github.com/Sirupsen/logrus",
