@@ -26,10 +26,10 @@ var BLADEFILE = `#
 # See https://github.com/jondot/blade for more information.
 #
 
-#blades:
-#  - source: iTunesArtwork@2x.png  # this image should be the only image, and the biggest image you can use (typically for icons, 1024x1024)
-#    mount: project_name/Images.xcassets/AppIcon.appiconset
-#    contents: true  # use 'false' if you want to only update existing catalog, 'true' if you want to generate a full catalog every time
+blades:
+  - source: assets/icon-1024x1024.png # this image should be the only image, and the biggest image you can use (typically for icons, 1024x1024)
+    mount: project_name/Assets.xcassets/AppIcon.appiconset
+    contents: true  # use 'false' if you want to only update existing catalog, 'true' if you want to generate a full catalog every time
 #  - source: spaceship.png
 #    mount: project_name/Images.xcassets/Spaceship.imageset # you can also generate regular image sets, not just app icons
 #  - source: iTunesArtwork@2x.png
@@ -51,7 +51,7 @@ func main() {
 
 	if *shouldInit {
 		ioutil.WriteFile("Bladefile", []byte(BLADEFILE), 0644)
-		fmt.Println("Wrote Bladefile.")
+		fmt.Println("Wrote Bladefile.\nYou have 1 blade set up with recommended settings, please review that it matches your project.")
 		os.Exit(0)
 	}
 
