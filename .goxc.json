@@ -9,7 +9,7 @@
 		"rmbin"
 	],
 	"BuildConstraints": "linux,darwin",
-	"PackageVersion": "0.0.5",
+	"PackageVersion": "0.0.6",
 	"ConfigVersion": "0.9",
 	"Env": [
 		"GOPATH={{.Env.GOPATH}}/src/github.com/jondot/blade/Godeps{{.PLS}}{{.Env.GOPATH}}"
