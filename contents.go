@@ -22,7 +22,7 @@ type ContentsImage struct {
 	Idiom       string `json:"idiom"`
 	Scale       string `json:"scale"`
 	Size        string `json:"size"`
-	ScreenWidth string `json:"screenWidth"`
+	ScreenWidth string `json:"screenWidth,omitempty"`
 }
 
 func (ci *ContentsImage) GetScale() int {
