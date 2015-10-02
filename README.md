@@ -159,6 +159,18 @@ Supported workflows:
 * __CI__ in your CI servers, either on OSX or Linux (though Linux can't compile code in this case, you can still use it to do image processing)
 
 
+Supported resize algorithms (`-i` or `--interpolation` flag):
+
+* `l3`: [Lanczos3](https://en.wikipedia.org/wiki/Lanczos_resampling)
+* `l2`: [Lanczos2](https://en.wikipedia.org/wiki/Lanczos_resampling)
+* `n`:  [Nearest Neighbor](https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation)
+* `bc`: [Bicubic](https://en.wikipedia.org/wiki/Bicubic_interpolation)
+* `bl`: [Bilinear](https://en.wikipedia.org/wiki/Bilinear_interpolation)
+* `mn`: [Mitchell-Netravali](https://de.wikipedia.org/wiki/Mitchell-Netravali-Filter)
+
+See [here](https://github.com/nfnt/resize) for live samples.
+
+
 
 
 ## Hacking on Blade
