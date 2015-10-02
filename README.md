@@ -5,7 +5,7 @@
   <img src="docs/blade-s.png" alt="Blade" />
 </h1>
 
-Automatically build and rebuild XCode image catalogs for app icons, universal images, and more.
+Automatically build and rebuild Xcode image catalogs for app icons, universal images, and more.
 
 
 
@@ -27,7 +27,7 @@ Here is how people solve this usually:
 
 The problem with these solutions is:
 
-* Some times the various slices are not up to date with XCode (new devices, new sizes)
+* Some times the various slices are not up to date with Xcode (new devices, new sizes)
 * It Almost always require extra work from you (placing each image manually in the catalog, fixing mismatches etc.)
 * You can't control the quality of the resize
 * You can't integrate the tooling into your build workflow or CI
@@ -50,7 +50,7 @@ Using Homebrew:
 
 #### Release
 
-Download one of the binaries in [releases](https://github.com/jondot/blade/releases), and put in your `PATH` or just include in each XCode project's root.
+Download one of the binaries in [releases](https://github.com/jondot/blade/releases), and put in your `PATH` or just include in each Xcode project's root.
 
 
 
@@ -149,7 +149,7 @@ Here's what we did:
 ## How does it work?
 
 
-Blade parses __the same XCode image catalog__ configuration file as its own configuration source - no new concept introduced. This allows it to be future-proof with XCode updates for new image sizes and catalog types.
+Blade parses __the same Xcode image catalog__ configuration file as its own configuration source - no new concept introduced. This allows it to be future-proof with Xcode updates for new image sizes and catalog types.
 
 
 Supported workflows:
