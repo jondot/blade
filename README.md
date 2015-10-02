@@ -161,7 +161,7 @@ Supported workflows:
 
 Supported resize algorithms (`-i` or `--interpolation` flag):
 
-* `l3`: [Lanczos3](https://en.wikipedia.org/wiki/Lanczos_resampling)
+* `l3`: [Lanczos3](https://en.wikipedia.org/wiki/Lanczos_resampling) - _Default_
 * `l2`: [Lanczos2](https://en.wikipedia.org/wiki/Lanczos_resampling)
 * `n`:  [Nearest Neighbor](https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation)
 * `bc`: [Bicubic](https://en.wikipedia.org/wiki/Bicubic_interpolation)
