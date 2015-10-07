@@ -31,8 +31,23 @@ func (cs *ContentsSuite) Test_should_get_size(c *C) {
 	ci := ContentsImage{}
 	ci.Size = "42x24"
 	w, h := ci.GetSize()
-	c.Check(w, Equals, 42)
-	c.Check(h, Equals, 24)
+	c.Check(w, Equals, 42.0)
+	c.Check(h, Equals, 24.0)
+
+	ci.Size = "27.5x24.5"
+	w, h = ci.GetSize()
+	c.Check(w, Equals, 27.5)
+	c.Check(h, Equals, 24.5)
+
+	ci.Size = "27x24.5"
+	w, h = ci.GetSize()
+	c.Check(w, Equals, 27.0)
+	c.Check(h, Equals, 24.5)
+
+	ci.Size = "27.5x24"
+	w, h = ci.GetSize()
+	c.Check(w, Equals, 27.5)
+	c.Check(h, Equals, 24.0)
 }
 
 func (cs *ContentsSuite) Test_should_get_scale(c *C) {

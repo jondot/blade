@@ -53,7 +53,7 @@ func (d *Dimensions) Compute(contents *Contents, meta *ContentsImage, sourceRect
 
 func dimensionFromSize(c *ContentsImage) Rect {
 	w, h := c.GetSize()
-	factor := c.GetScale()
+	factor := float64(c.GetScale())
 
 	return Rect{Width: uint(factor * w), Height: uint(factor * h)}
 }
