@@ -1,4 +1,4 @@
-require 'FileUtils'
+require 'fileutils'
 include FileUtils
 
 def error_if(condition, msg)
