@@ -1,5 +1,0 @@
-blades:
-  - source: source.png
-    mount: output/Assets.xcassets/AppIcon.appiconset
-    contents: true
-

@@ -1,0 +1,12 @@
+blades:
+  - source: source.png
+    mount: after/Assets.xcassets/AppIcon.appiconset
+    contents: true
+  - source: source.png
+    mount: after/Assets.xcassets/Watch.imageset
+    contents: true
+  - source: source.png
+    mount: after/Assets.xcassets/Image.imageset
+    contents: true
+    
+
