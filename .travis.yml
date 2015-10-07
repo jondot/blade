@@ -1,4 +1,4 @@
 language: go
 before_install: make setup
-script: make test && ruby integration.rb
+script: make test && make build && ruby integration.rb
 go: 1.4
