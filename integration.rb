@@ -8,6 +8,7 @@ def error_if(condition, msg)
 end
 
 
+blade = File.join(File.expand_path(File.dirname(__FILE__)), 'blade')
 tests = %w{ interpolation }
 
 tests.each do |test|
@@ -15,7 +16,7 @@ tests.each do |test|
   cd test_dir
   rm_rf "after"
   cp_r "before", "after"
-  blade_out = `#{File.join(File.expand_path(File.dirname(__FILE__)), 'blade')}`
+  blade_out = `#{blade}`
   error_if(!blade_out.empty?, blade_out)
   exit(1) unless blade_out.empty?
   diff_out = `git diff #{test_dir}`
