@@ -15,7 +15,7 @@ tests.each do |test|
   cd test_dir
   rm_rf "after"
   cp_r "before", "after"
-  blade_out = `#{File.expand_path('./blade', File.dirname(__FILE__))}`
+  blade_out = `#{File.join(File.dirname(__FILE__), 'blade')}`
   error_if(!blade_out.empty?, blade_out)
   exit(1) unless blade_out.empty?
   diff_out = `git diff #{test_dir}`
