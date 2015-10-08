@@ -110,7 +110,7 @@ func (s *RunnerSuite) Test_should_fill_in_computed_size_given_empty_size(c *C) {
 
 	r.run()
 
-	c.Check(contents.Images[0].Size, Equals, "40x40")
+	c.Check(contents.Images[0].Size, Equals, "20x20")
 }
 
 func (s *RunnerSuite) Test_should_convert_given_list_of_images(c *C) {

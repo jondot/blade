@@ -20,8 +20,8 @@ func (s *DimensionsSuite) Test_should_compute_size_based_on_existing_scales_give
 		&contents.Images[0],
 		Rect{60, 60},
 	)
-	c.Check(r.Width, Equals, uint(40))
-	c.Check(r.Height, Equals, uint(40))
+	c.Check(r.Width, Equals, 40.0)
+	c.Check(r.Height, Equals, 40.0)
 
 	// ipad
 	r = s.dim.Compute(
@@ -29,8 +29,8 @@ func (s *DimensionsSuite) Test_should_compute_size_based_on_existing_scales_give
 		&contents.Images[2],
 		Rect{60, 60},
 	)
-	c.Check(r.Width, Equals, uint(60))
-	c.Check(r.Height, Equals, uint(60))
+	c.Check(r.Width, Equals, 60.0)
+	c.Check(r.Height, Equals, 60.0)
 
 }
 
@@ -41,6 +41,6 @@ func (s *DimensionsSuite) Test_should_use_size_and_scale_when_given_size_explici
 		&contents.Images[0],
 		Rect{42, 42},
 	)
-	c.Check(r.Width, Equals, uint(29*2))
-	c.Check(r.Height, Equals, uint(29*2))
+	c.Check(r.Width, Equals, 29*2.0)
+	c.Check(r.Height, Equals, 29*2.0)
 }
