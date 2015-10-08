@@ -4,37 +4,37 @@
       "filename": "source-universal-333@1x.png",
       "idiom": "universal",
       "scale": "1x",
-      "size": "333x333"
+      "size": "333.3333333333333x333.3333333333333"
     },
     {
       "filename": "source-universal-333@2x.png",
       "idiom": "universal",
       "scale": "2x",
-      "size": "666x666"
+      "size": "333.3333333333333x333.3333333333333"
     },
     {
       "filename": "source-universal-333@3x.png",
       "idiom": "universal",
       "scale": "3x",
-      "size": "1000x1000"
+      "size": "333.3333333333333x333.3333333333333"
     },
     {
       "filename": "source-watch-500@2x.png",
       "idiom": "watch",
       "scale": "2x",
-      "size": "1000x1000"
+      "size": "500x500"
     },
     {
       "filename": "source-watch-500@2x.png",
       "idiom": "watch",
       "scale": "2x",
-      "size": "1000x1000"
+      "size": "500x500"
     },
     {
       "filename": "source-watch-500@2x.png",
       "idiom": "watch",
       "scale": "2x",
-      "size": "1000x1000"
+      "size": "500x500"
     }
   ],
   "info": {

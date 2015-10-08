@@ -8,8 +8,8 @@ type Dimensions struct {
 }
 
 type Rect struct {
-	Width  uint
-	Height uint
+	Width  float64
+	Height float64
 }
 
 func NewDimensions() *Dimensions {
@@ -45,8 +45,8 @@ func (d *Dimensions) Compute(contents *Contents, meta *ContentsImage, sourceRect
 	scaleDownFactor := float64(meta.GetScale()) / highestFactor
 	//log.Printf("%v scale factor: %1.2f computed from %d and highest %2.0f", meta, scaleDownFactor, meta.GetScale(), highestFactor)
 	return Rect{
-		uint(float64(sourceRect.Width) * scaleDownFactor),
-		uint(float64(sourceRect.Height) * scaleDownFactor),
+		float64(sourceRect.Width) * scaleDownFactor,
+		float64(sourceRect.Height) * scaleDownFactor,
 	}
 
 }
@@ -55,5 +55,5 @@ func dimensionFromSize(c *ContentsImage) Rect {
 	w, h := c.GetSize()
 	factor := float64(c.GetScale())
 
-	return Rect{Width: uint(factor * w), Height: uint(factor * h)}
+	return Rect{Width: factor * w, Height: factor * h}
 }

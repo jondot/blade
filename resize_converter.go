@@ -38,8 +38,8 @@ func (r *ResizeConverter) Size(inFile string) (Rect, error) {
 	}
 
 	return Rect{
-		uint(source.Bounds().Dx()),
-		uint(source.Bounds().Dy()),
+		float64(source.Bounds().Dx()),
+		float64(source.Bounds().Dy()),
 	}, nil
 }
 
@@ -66,7 +66,7 @@ func (r *ResizeConverter) Convert(inFile string, outFile string, rect Rect) erro
 		interp = interpolations["l3"]
 	}
 
-	resized := resize.Resize(rect.Width, rect.Height, source, interp)
+	resized := resize.Resize(uint(rect.Width), uint(rect.Height), source, interp)
 	png.Encode(out, resized)
 	return nil
 }

@@ -35,7 +35,7 @@ func (f *Runner) run() {
 
 		// sync meta structure with the new data we've generated
 		if meta.Size == "" {
-			meta.Size = fmt.Sprintf("%dx%d", rect.Width, rect.Height)
+			meta.Size = fmt.Sprintf("%vx%v", float64(rect.Width)/float64(meta.GetScale()), float64(rect.Height)/float64(meta.GetScale()))
 		}
 		if meta.Filename == "" {
 			baseName := strings.TrimSuffix(path.Base(f.SourceFile), path.Ext(f.SourceFile))
