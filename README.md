@@ -28,7 +28,7 @@ Here is how people solve this usually:
 The problem with these solutions is:
 
 * Some times the various slices are not up to date with Xcode (new devices, new sizes)
-* It Almost always require extra work from you (placing each image manually in the catalog, fixing mismatches etc.)
+* It almost always requires extra work from you (placing each image manually in the catalog, fixing mismatches etc.)
 * You can't control the quality of the resize
 * You can't integrate the tooling into your build workflow or CI
 
